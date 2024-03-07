@@ -247,6 +247,10 @@ rgba(46, 47, 66, 0.7)), url("../images/people-office.png");
   display: flex;
 }
 
+.footer-social-icons {
+  margin-right: 80px;
+}
+
 .footer-text {
   font-family: inherit;
   max-width: 264px;
@@ -396,7 +400,6 @@ rgba(46, 47, 66, 0.7)), url("../images/people-office.png");
   fill: var(--white);
 }
 
-
 .soc-card {
   width: 40px;
   height: 40px;
@@ -435,6 +438,49 @@ rgba(46, 47, 66, 0.7)), url("../images/people-office.png");
   position: absolute;
   z-index: -1;
 }
+
+.form-button {
+  background-color: var(--ocean);
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: var(--WHITE, #FFF);
+  text-align: center;
+  /* Button Text */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .form-button:hover {
+    background: var(--IRIS, #4D5AE5);
+  }
+
+  .form-email-control {
+    border-radius: 4px;
+    border: 1px solid var(--WHITE, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background: var(--NAVY-BLUE, #2E2F42);
+    padding-left:16px;
+    margin-right: 24px;
+    height: 40px;
+    width: 262px;
+  }
+
+  .form-email-control,
+  .form-email-control::placeholder {
+    color: var(--WHITE, #FFF);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.03em;
+  }
 
 /* Portfolio */
 .filter-set {
@@ -525,6 +571,7 @@ rgba(46, 47, 66, 0.7)), url("../images/people-office.png");
 
 .modal {
   transition: opacity 1s, transform 1s;
+  padding-top: 48px;
 }
 
 .is-hidden .back-drop {
@@ -550,3 +597,147 @@ rgba(46, 47, 66, 0.7)), url("../images/people-office.png");
   line-height: 1;
 }
 
+/*Contact Form */
+
+.contact-form {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  color: var(--NAVY-BLUE, #2E2F42);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  color: var(--LIGHT-SLATE, #8E8F99);
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+  height: 40px;
+  flex-shrink: 0;
+  padding-left: 38px;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  fill: var(--navy);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.form-input:focus {
+  border-color: var(--iris);
+}
+
+.form-input:focus + .form-icon {
+  fill: var(--iris)
+}
+
+.text {
+  padding: 8px 16px;
+  height: 120px;
+}
+
+.text::placeholder {
+  color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+}
+
+.term-block {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.term-ch {
+  margin-right: 8px;
+  height: 16px;
+}
+
+.term-desc {
+  color: var(--LIGHT-SLATE, #8E8F99);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  margin-left: 8px;
+}
+
+.term-link {
+  color: var(--IRIS, #4D5AE5);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: var(--IRIS, #4D5AE5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.term-ch {
+  display: none;
+}
+
+.default {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: var(--navy);
+  fill: white;
+}
+
+.check-icon > .checked {
+display: none;
+}
+
+.term-ch:checked  > .check-icon > .checked {
+  display: inline-block;
+}
+
+.term-ch {
+  display: none;
+}
+
+.checked {
+  display: none; 
+}
+
+.term-ch:checked + .checkbox-label .default {
+  display: none;
+}
+
+.term-ch:checked + .checkbox-label .checked {
+  display: inline-block;
+}
